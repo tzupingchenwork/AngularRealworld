@@ -3,26 +3,25 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
-import { SettingsComponent } from './settings/settings.component';
-import { ArticleComponent } from './article/article.component';
 import { HeaderComponent } from './shared/layout/header/header.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
+import { SettingsModule } from './settings/settings.module';
+import { EditorModule } from './editor/editor.module';
+import { ArticleModule } from './article/article.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ProfileComponent,
-    SettingsComponent,
-    ArticleComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SettingsModule,
+    EditorModule,
+    ArticleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
