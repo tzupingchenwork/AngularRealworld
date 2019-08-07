@@ -10,7 +10,10 @@ import { EditorModule } from './editor/editor.module';
 import { ArticleModule } from './article/article.module';
 import { AuthComponent } from './auth/auth.component';
 import { AuthModule } from './auth/auth.module';
-
+// Web API
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,10 @@ import { AuthModule } from './auth/auth.module';
     EditorModule,
     ArticleModule,
     AuthModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+    InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

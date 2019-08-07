@@ -8,7 +8,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AuthComponent implements OnInit {
   authType = '';
-  title = '';
+  // title: String = '';
+  // isSubmitting = false;
+  // authForm: FormGroup;
   constructor(
     private route: ActivatedRoute
   ) { }
@@ -18,5 +20,8 @@ export class AuthComponent implements OnInit {
       // 取得登入或註冊
       this.authType = data[data.length - 1].path;
   });
+  }
+  submitForm() {
+
   }
 }

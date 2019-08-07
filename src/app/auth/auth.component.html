@@ -14,27 +14,30 @@
           <li>That email is already taken</li>
         </ul>
 
-        <form>
+        <form formGroup="authForm" (ngSubmit)="submitForm()">
           <fieldset class="form-group">
             <input class="form-control form-control-lg"
+                   formControlName="username"
                    type="text"
-                   placeholder="User Name"
+                   placeholder="User Name"｀
                    *ngIf="authType == 'register'">
           </fieldset>
           <fieldset class="form-group">
             <input class="form-control form-control-lg"
+                   formControlName="email"
                    type="text"
                    placeholder="Email">
           </fieldset>
           <fieldset class="form-group">
             <input class="form-control form-control-lg"
+                   formControlName="password"
                    type="password"
                    placeholder="Password">
           </fieldset>
-          <button class="btn btn-lg btn-primary pull-xs-right" *ngIf="authType == 'register'">
+          <button class="btn btn-lg btn-primary pull-xs-right" *ngIf="authType == 'register'" type="submit">
             註冊
           </button>
-          <button class="btn btn-lg btn-primary pull-xs-right" *ngIf="authType == 'login'">
+          <button class="btn btn-lg btn-primary pull-xs-right" *ngIf="authType == 'login' "type="submit">
             登入
           </button>
         </form>
