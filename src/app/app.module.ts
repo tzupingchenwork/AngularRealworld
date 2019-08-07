@@ -8,6 +8,8 @@ import { FooterComponent } from './shared/layout/footer/footer.component';
 import { SettingsModule } from './settings/settings.module';
 import { EditorModule } from './editor/editor.module';
 import { ArticleModule } from './article/article.module';
+import { AuthComponent } from './auth/auth.component';
+import { AuthModule } from './auth/auth.module';
 
 
 @NgModule({
@@ -15,6 +17,7 @@ import { ArticleModule } from './article/article.module';
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,6 +25,7 @@ import { ArticleModule } from './article/article.module';
     SettingsModule,
     EditorModule,
     ArticleModule,
+    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

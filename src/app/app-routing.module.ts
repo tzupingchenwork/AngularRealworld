@@ -23,6 +23,10 @@ const routes: Routes = [
   {
     path: 'article',
     loadChildren: './article/article.module#ArticleModule'
+  },
+  {
+    path: 'auth',
+    loadChildren: './auth/auth.module#AuthModule'
   }
 ];
 // ｀｀｀｀設定事先載入
