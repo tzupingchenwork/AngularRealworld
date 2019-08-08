@@ -4,10 +4,10 @@ export class Article {
   title = '';
   description = '';
   body = '';
-  tagList: Array<string> = [];
-  createdAt: string;
-  updatedAt: string;
-  favorited: boolean;
-  favoritesCount: number;
-  author: Profile;
+  // tagList: Array<string> = [];
+  // createdAt: string;
+  // updatedAt: string;
+  // favorited: boolean;
+  // favoritesCount: number;
+  // author: Profile;
 }
