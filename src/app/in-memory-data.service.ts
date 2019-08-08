@@ -12,11 +12,11 @@ export class InMemoryDataService {
       { id: '1', email: 'aa@com', username: 'Andy', bio: 'hello' },
       { id: '2', email: 'bb@com', username: 'Abby', bio: 'hello' },
     ];
-    const article = [
-      {id: '1', slug : 'slug1', title: 'title1', description: 'description1' , body: 'body1' },
-      {id: '2', slug : 'slug2', title: 'title2', description: 'description2' , body: 'body2' }
+    const articles = [
+      {id: '1', slug : 'slug1', title: '我是標題1', description: '描述1' , body: '本體1' },
+      {id: '2', slug : 'slug2', title: '我是標題2', description: '描述2' , body: '本體2' }
     ];
-    return {users, article};
+    return {users, articles};
   }
 
 }

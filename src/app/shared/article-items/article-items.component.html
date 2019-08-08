@@ -1,4 +1,4 @@
-<div class="article-preview" *ngFor="let article of articles"> -->
+<div class="article-preview" *ngFor="let article of articles">
    <div class="article-meta">
     <a href="profile.html"><img src="http://i.imgur.com/Qr71crq.jpg" /></a>
     <div class="info">
@@ -11,6 +11,7 @@
   </div>
   <a [routerLink]="['/article', article.slug]" class="preview-link">
     <h1>{{ article.title }}</h1>
+    <p>文章id:{{ article.id }}</p>
     <p>{{ article.description }}</p>
     <span>Read more...</span>
   </a>
