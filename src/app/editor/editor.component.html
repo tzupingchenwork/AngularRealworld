@@ -3,7 +3,8 @@
     <div class="row">
 
       <div class="col-md-10 offset-md-1 col-xs-12">
-        <form [formGroup]="articleForm">
+        <form [formGroup]="articleForm"
+              (ngSubmit)="onSubmit(articleForm.value)">
           <fieldset>
             <fieldset class="form-group">
                 <input type="text"
@@ -26,7 +27,7 @@
             <!-- <fieldset class="form-group">
                 <input type="text" class="form-control" placeholder="Enter tags"><div class="tag-list"></div>
             </fieldset> -->
-            <button class="btn btn-lg pull-xs-right btn-primary" type="submit" (click)="onSubmit(articleForm)" >
+            <button class="btn btn-lg pull-xs-right btn-primary" type="submit" >
                 發佈文章
             </button>
           </fieldset>

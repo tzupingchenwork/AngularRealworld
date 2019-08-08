@@ -1,6 +1,7 @@
 import { Profile } from './profile.model';
 export class Article {
   // slug: string;
+  id = 1;
   title = '';
   description = '';
   body = '';

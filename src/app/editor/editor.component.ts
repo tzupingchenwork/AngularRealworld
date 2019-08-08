@@ -9,9 +9,8 @@ import { ArticlesService } from '../service/articles.service';
   styleUrls: ['./editor.component.css']
 })
 export class EditorComponent implements OnInit {
-  article: Article[];
+  articles: Article[];
   // articleForm: FormGroup;
-
   articleForm: FormGroup;
   constructor(private articlesService: ArticlesService,
               private fb: FormBuilder ) {
@@ -22,16 +21,18 @@ export class EditorComponent implements OnInit {
   }
   createForm() {
     this.articleForm = this.fb.group({
+      id : 1,
       title : '',
       description : '',
       body : '',
     });
   }
-  onSubmit(articleForm): void {
-    console.log(this.articleForm);
-    this.articlesService.addArticle(articleForm)
+  onSubmit(value: any): void {
+    // console.log(typeof(JSON.stringify(articleForm)));
+    // const form: string = JSON.stringify(articleForm);
+    this.articlesService.addArticle(value)
         .subscribe(article => {
-          this.article.push(article);
+          this.articles.push(article);
         });
   }
 
