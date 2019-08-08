@@ -19,4 +19,9 @@ export class ArticlesService {
     const url = `${this.articlesUrl}`;
     return this.http.get<Article[]>(url);
   }
+  addArticle(article: Article): Observable<Article> {
+    const url = `${this.articlesUrl}`;
+    // return this.http.post<Article>(this.articlesUrl , article , httpOptions);
+    return this.http.post<Article>('api/articles/' + article.title , article , httpOptions);
+  }
 }

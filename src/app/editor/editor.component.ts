@@ -9,7 +9,7 @@ import { ArticlesService } from '../service/articles.service';
   styleUrls: ['./editor.component.css']
 })
 export class EditorComponent implements OnInit {
-  article: Article = {} as Article;
+  article: Article[];
   // articleForm: FormGroup;
 
   articleForm: FormGroup;
@@ -27,7 +27,12 @@ export class EditorComponent implements OnInit {
       body : '',
     });
   }
-  onSubmit(): void {
-    console.log(this.article);
+  onSubmit(articleForm): void {
+    console.log(this.articleForm);
+    this.articlesService.addArticle(articleForm)
+        .subscribe(article => {
+          this.article.push(article);
+        });
   }
+
 }
