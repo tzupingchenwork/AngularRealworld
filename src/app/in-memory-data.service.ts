@@ -13,8 +13,8 @@ export class InMemoryDataService {
       { id: '2', email: 'bb@com', username: 'Abby', bio: 'hello' },
     ];
     const articles = [
-      {id: '1', slug : 'slug1', title: '我是標題1', description: '描述1' , body: '本體1' },
-      {id: '2', slug : 'slug2', title: '我是標題2', description: '描述2' , body: '本體2' }
+      {id: '1', title: '我是標題1', description: '描述1' , body: '本體1' },
+      {id: '2', title: '我是標題2', description: '描述2' , body: '本體2' }
     ];
     return {users, articles};
   }

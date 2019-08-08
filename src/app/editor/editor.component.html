@@ -3,22 +3,31 @@
     <div class="row">
 
       <div class="col-md-10 offset-md-1 col-xs-12">
-        <form>
+        <form [formGroup]="articleForm">
           <fieldset>
             <fieldset class="form-group">
-                <input type="text" class="form-control form-control-lg" placeholder="Article Title">
+                <input type="text"
+                       class="form-control form-control-lg"
+                       placeholder="文章標題"
+                       formControlName="title">
             </fieldset>
             <fieldset class="form-group">
-                <input type="text" class="form-control" placeholder="What's this article about?">
+                <input type="text"
+                       class="form-control"
+                       placeholder="這篇文章關於什麼？"
+                       formControlName="description">
             </fieldset>
             <fieldset class="form-group">
-                <textarea class="form-control" rows="8" placeholder="Write your article (in markdown)"></textarea>
+                <textarea class="form-control"
+                          rows="8"
+                          placeholder="寫下文章(markdown)"
+                          formControlName="body"></textarea>
             </fieldset>
-            <fieldset class="form-group">
+            <!-- <fieldset class="form-group">
                 <input type="text" class="form-control" placeholder="Enter tags"><div class="tag-list"></div>
-            </fieldset>
-            <button class="btn btn-lg pull-xs-right btn-primary" type="button">
-                Publish Article
+            </fieldset> -->
+            <button class="btn btn-lg pull-xs-right btn-primary" type="button" (ngSubmit)="onSubmit(articleForm)" >
+                發佈文章
             </button>
           </fieldset>
         </form>

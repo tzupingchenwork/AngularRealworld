@@ -10,6 +10,8 @@ import { EditorModule } from './editor/editor.module';
 import { ArticleModule } from './article/article.module';
 import { AuthComponent } from './auth/auth.component';
 import { AuthModule } from './auth/auth.module';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // Web API
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -32,7 +34,9 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
     InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
