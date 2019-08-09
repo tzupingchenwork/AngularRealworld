@@ -20,9 +20,9 @@ export class ArticlesService {
     return this.http.get<Article[]>(url);
   }
   // article: Article
-  addArticle( article: any ): Observable<Article> {
+  addArticle( articles: object ): Observable<Article> {
     const url = `${this.articlesUrl}`;
     // return this.http.post<Article>(this.articlesUrl , article , httpOptions);
-    return this.http.post<Article>('api/articles/' , article , httpOptions);
+    return this.http.post<Article>('api/articles/' , { articles } , httpOptions);
   }
 }

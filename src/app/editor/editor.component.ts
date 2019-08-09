@@ -27,13 +27,19 @@ export class EditorComponent implements OnInit {
       body : '',
     });
   }
-  onSubmit(value: any): void {
+  onSubmit(value: object): void {
     // console.log(typeof(JSON.stringify(articleForm)));
     // const form: string = JSON.stringify(articleForm);
+    // this.articlesService.addArticle(value)
+    //     .subscribe(article => {
+    //       this.articles.push(article);
+    //     });
     this.articlesService.addArticle(value)
-        .subscribe(article => {
-          this.articles.push(article);
-        });
+                        .subscribe(res => {
+                          console.log(res);
+                          console.log(res.id);
+                          // console.log(res.articles.title);
+                        });
   }
 
 }
