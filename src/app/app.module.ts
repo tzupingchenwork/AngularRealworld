@@ -16,6 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { HttpClientModule } from '@angular/common/http';
+import { UpdateComponent } from './update/update.component';
+import { UpdateModule } from './update/update.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     AuthComponent,
+    UpdateComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     // InMemoryDataService, { dataEncapsulation: false }
     // ),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    UpdateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
