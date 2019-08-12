@@ -11,8 +11,18 @@
   </div>
   <a [routerLink]="['/article', article.id]" class="preview-link">
     <h1>{{ article.title }}</h1>
+  </a>
     <p>文章id:{{ article.id }}</p>
     <p>{{ article.description }}</p>
-    <span>Read more...</span>
-  </a>
+    <span>
+      <a class ='btn btn-sm btn-outline-secondary' href="/editor/eeee-83ezkp">
+        <i class="ion-edit">
+           Edit Atricle
+        </i>
+      </a>
+      <button class="btn btn-sm btn-outline-danger">
+        <i class="ion-trash-a"> Delete Article </i>
+      </button>
+    </span>
+
  </div>

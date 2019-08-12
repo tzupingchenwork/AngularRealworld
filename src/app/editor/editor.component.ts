@@ -21,22 +21,16 @@ export class EditorComponent implements OnInit {
   }
   createForm() {
     this.articleForm = this.fb.group({
-      id : 1,
+      id : 0,
       title : '',
       description : '',
       body : '',
     });
   }
-  onSubmit(value: object): void {
-    // console.log(typeof(JSON.stringify(articleForm)));
-    // const form: string = JSON.stringify(articleForm);
-    // this.articlesService.addArticle(value)
-    //     .subscribe(article => {
-    //       this.articles.push(article);
-    //     });
+  onSubmit(value: any): void {
     this.articlesService.addArticle(value)
-                        .subscribe(res => {
-                          console.log(res);
+                        .subscribe(article => {
+                          console.log(article);
                         });
   }
 

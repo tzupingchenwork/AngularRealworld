@@ -32,9 +32,9 @@ import { HttpClientModule } from '@angular/common/http';
     ArticleModule,
     AuthModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-    InMemoryDataService, { dataEncapsulation: false }
-    ),
+    // HttpClientInMemoryWebApiModule.forRoot(
+    // InMemoryDataService, { dataEncapsulation: false }
+    // ),
     FormsModule,
     ReactiveFormsModule
   ],

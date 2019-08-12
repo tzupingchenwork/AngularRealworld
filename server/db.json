@@ -1,0 +1,16 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": 3323,
+      "description": "吱吱吱吱吱吱",
+      "body": "首先在瀏覽器開啟 http://localhost:3000 會出現整個 JSON Server 主控頁面，記住此頁面會跟路徑 ./public/index.html 的檔案有所衝突所以要注意一下避免被覆蓋，從畫面中可以得知目前有幾條 API 和幾筆資料記錄以及可以使用 GET、POST、PUT、PATCH、DELETE、OPTIONS 等 request method。"
+    },
+    {
+      "id": 2,
+      "title": 3999,
+      "description": "嚕嚕嚕嚕嚕",
+      "body": "POST，PUT 或 PATCH 請求應包含 Content-Type：application / json標頭，以在請求的 body 中使用JSON。 否則它將導致 200 OK 但不對資料進行更改"
+    }
+  ]
+}
