@@ -29,9 +29,7 @@ export class EditorComponent implements OnInit {
   }
   onSubmit(value: any): void {
     this.articlesService.addArticle(value)
-                        .subscribe(article => {
-                          console.log(article);
-                        });
+                        .subscribe(article => console.log(article));
   }
 
 }

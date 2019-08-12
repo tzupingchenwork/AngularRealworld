@@ -20,10 +20,10 @@ const routes: Routes = [
     path: 'editor',
     loadChildren: './editor/editor.module#EditorModule'
   },
-  // {
-  //   path: 'editor/:id',
-  //   loadChildren: './editor/editor.module#EditorModule'
-  // },
+  {
+    path: 'update/:id',
+    loadChildren: './update/update.module#UpdateModule'
+  },
   {
     path: 'article/:id',
     loadChildren: './article/article.module#ArticleModule'

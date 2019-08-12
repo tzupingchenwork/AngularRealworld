@@ -25,7 +25,7 @@ import { UpdateModule } from './update/update.module';
     HeaderComponent,
     FooterComponent,
     AuthComponent,
-    UpdateComponent,
+    // UpdateComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,8 +39,7 @@ import { UpdateModule } from './update/update.module';
     // InMemoryDataService, { dataEncapsulation: false }
     // ),
     FormsModule,
-    ReactiveFormsModule,
-    UpdateModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

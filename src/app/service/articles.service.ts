@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Article } from '../shared/models/article.model';
 import { Observable, of } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -13,7 +14,8 @@ const httpOptions = {
 })
 export class ArticlesService {
 
-  constructor( private http: HttpClient) { }
+  constructor( private http: HttpClient,
+               private route: ActivatedRoute) { }
   // private articlesUrl = 'api/articles';  // URL to web api
   private articlesUrl = 'http://localhost:3000';  // URL to web api
   // 取得文章列表
@@ -30,17 +32,21 @@ export class ArticlesService {
   }
 
   addArticle( articles: any ): Observable<Article> {
-    // const url = `${this.articlesUrl}`;
-    // return this.http.post<Article>(this.articlesUrl , article , httpOptions);
     return this.http.post<Article>( this.articlesUrl + '/articles' ,  articles , httpOptions);
   }
 
   deleteArticle(articles: Article | number): Observable<Article> {
     const id = typeof articles === 'number' ? articles : articles.id;
-    // return this.http.delete<Article>(this.articlesUrl + id, httpOptions);
     return this.http.delete<Article>(this.articlesUrl  + '/articles/' + id, httpOptions);
   }
-  updateArticle(articles: Article): Observable<any> {
-    return this.http.put(this.articlesUrl, articles , httpOptions);
+  // updateArticle(articles: any): Observable<any> {
+  //   const id = +this.route.snapshot.paramMap.get('id');
+  //   return this.http.put(this.articlesUrl + '/articles/' + id, articles , httpOptions);
+  // }
+  updateArticle(articles: any, id: number ): Observable<any> {
+    // console.log(id);
+    // console.log(articles);
+    // const id = typeof articles === 'number' ? articles : articles.id;
+    return this.http.put(this.articlesUrl + '/articles/' + id, {articles} , httpOptions);
   }
 }
