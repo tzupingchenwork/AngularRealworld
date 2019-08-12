@@ -37,8 +37,6 @@ export class EditorComponent implements OnInit {
     this.articlesService.addArticle(value)
                         .subscribe(res => {
                           console.log(res);
-                          console.log(res.id);
-                          // console.log(res.articles.title);
                         });
   }
 

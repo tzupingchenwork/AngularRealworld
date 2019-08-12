@@ -21,7 +21,7 @@ const routes: Routes = [
     loadChildren: './editor/editor.module#EditorModule'
   },
   {
-    path: 'article',
+    path: 'article/:id',
     loadChildren: './article/article.module#ArticleModule'
   },
   {

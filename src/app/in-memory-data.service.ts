@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { User } from './shared/models/user.model';
 import { Article } from './shared/models/article.model';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,7 +20,7 @@ export class InMemoryDataService {
     ];
     return { users, articles};
   }
-  genId(articles: Article[]): number {
-    return articles.length > 0 ? Math.max(...articles.map(article =>  article.id)) + 1 : 11;
-  }
+  // genId(articles: Article[]): number {
+  //   return articles.length > 0 ? Math.max(...articles.map(article =>  article.id)) + 1 : 11;
+  // }
 }
