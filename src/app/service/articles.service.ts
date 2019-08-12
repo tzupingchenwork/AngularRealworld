@@ -40,7 +40,7 @@ export class ArticlesService {
     // return this.http.delete<Article>(this.articlesUrl + id, httpOptions);
     return this.http.delete<Article>(this.articlesUrl  + '/articles/' + id, httpOptions);
   }
-  updateHero(articles: Article): Observable<any> {
+  updateArticle(articles: Article): Observable<any> {
     return this.http.put(this.articlesUrl, articles , httpOptions);
   }
 }
