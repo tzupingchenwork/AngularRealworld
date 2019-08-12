@@ -20,4 +20,7 @@ export class ArticleItemsComponent implements OnInit {
     this.articlesService.getArticles()
         .subscribe(articles => this.articles = articles);
   }
+  deleteArticle(article: Article): void {
+    this.articlesService.deleteArticle(article).subscribe();
+  }
 }

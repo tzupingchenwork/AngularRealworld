@@ -37,7 +37,8 @@ export class ArticlesService {
 
   deleteArticle(articles: Article | number): Observable<Article> {
     const id = typeof articles === 'number' ? articles : articles.id;
-    return this.http.delete<Article>(this.articlesUrl + id, httpOptions);
+    // return this.http.delete<Article>(this.articlesUrl + id, httpOptions);
+    return this.http.delete<Article>(this.articlesUrl  + '/articles/' + id, httpOptions);
   }
   updateHero(articles: Article): Observable<any> {
     return this.http.put(this.articlesUrl, articles , httpOptions);

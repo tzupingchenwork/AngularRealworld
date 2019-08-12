@@ -2,21 +2,9 @@
   "articles": [
     {
       "id": 1,
-      "title": 3323,
-      "description": "吱吱吱吱吱吱",
-      "body": "錄以及可以使用 GET、POST、PUT、PATCH、DELETE、OPTIONS 等 request method。"
-    },
-    {
-      "id": 2,
-      "title": "第二篇",
-      "description": "文章",
-      "body": "test "
-    },
-    {
-      "id": 3,
-      "title": "第三篇",
-      "description": "文章",
-      "body": "第三篇文章"
+      "title": "11",
+      "description": "111",
+      "body": "111"
     }
   ]
 }
