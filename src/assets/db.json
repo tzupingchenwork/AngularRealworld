@@ -1,22 +1,16 @@
 {
   "articles": [
     {
-      "articles": {
-        "id": 0,
-        "title": "fwefwefwefewfwef",
-        "description": "123",
-        "body": "dffefefwe"
-      },
-      "id": 3
+      "id": 1,
+      "title": "dfasdf",
+      "description": "fas",
+      "body": "dsf"
     },
     {
-      "articles": {
-        "id": 0,
-        "title": "234324",
-        "description": "324",
-        "body": "234234"
-      },
-      "id": 4
+      "id": 2,
+      "title": "weqwe",
+      "description": "qweq",
+      "body": "weqwe"
     }
   ]
 }

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Article } from '../shared/models/article.model';
 import { ArticlesService } from '../service/articles.service';
 import { ActivatedRoute } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-update',
@@ -14,6 +15,7 @@ export class UpdateComponent implements OnInit {
   // articleForm: FormGroup;
   articleForm: FormGroup;
   constructor(private route: ActivatedRoute,
+              private http: HttpClient,
               private articlesService: ArticlesService,
               private fb: FormBuilder ) {
               this.createForm();
@@ -21,17 +23,18 @@ export class UpdateComponent implements OnInit {
   ngOnInit() {
   }
   createForm() {
+    const Artid = +this.route.snapshot.paramMap.get('id');
     this.articleForm = this.fb.group({
-      id : 0,
+      id : Artid,
       title : '',
       description : '',
       body : '',
     });
   }
   onSubmit(value: any): void {
-    const id = +this.route.snapshot.paramMap.get('id');
     console.log(value);
-    this.articlesService.updateArticle(value, id)
-                        .subscribe( articles => console.log(articles));
+    this.articlesService.updateArticle(value)
+                        .subscribe( () => console.log('articles'));
   }
+
 }

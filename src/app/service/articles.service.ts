@@ -43,10 +43,9 @@ export class ArticlesService {
   //   const id = +this.route.snapshot.paramMap.get('id');
   //   return this.http.put(this.articlesUrl + '/articles/' + id, articles , httpOptions);
   // }
-  updateArticle(articles: any, id: number ): Observable<any> {
+  updateArticle(articles: any ): Observable<any> {
     // console.log(id);
-    // console.log(articles);
-    // const id = typeof articles === 'number' ? articles : articles.id;
-    return this.http.put(this.articlesUrl + '/articles/' + id, {articles} , httpOptions);
+    console.log(articles.id);
+    return this.http.put(this.articlesUrl + '/articles/' + articles.id, articles , httpOptions);
   }
 }
