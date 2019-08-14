@@ -25,7 +25,6 @@ export class ArticleComponent implements OnInit {
   // 取得單一文章
   getArticle(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    // console.log('id:' + id);
     this.articlesService.getArticle(id)
       .subscribe(article => this.article = article);
   }
